@@ -41,16 +41,7 @@ SHT1x sht1x(dataPin, clockPin);
 
 // Update these with values suitable for your network.
 
-/*
-const char* ssid = "Ai";
-const char* password = "skoro-otpysk2016";
-const char* mqtt_server = "m13.cloudmqtt.com";
-const char* mqtt_user = "kmivtgle";
-const char* mqtt_passwd = "NlcRwq0HtoLe";
-//mqtt_port=14419
-ESP8266_wtr_sensor1_humiditySHT10
 
-*/
 WiFiClient espClient;
 PubSubClient client(espClient);
 long lastMsg = 0;
@@ -68,32 +59,6 @@ int tm=300;
 float temp=0;
 int gpio2_pin = 2;
 
-/*
-void setup_wifi() {
-
-  delay(10);
-  // We start by connecting to a WiFi network
-  Serial.println();
-  Serial.print("Connecting to ");
-  Serial.println(ssid);
-
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-
-  randomSeed(micros());
-
-  Serial.println("");
-  Serial.println("WiFi connected");
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
-  
-  
-}
-*/
 
 void callback(char* topic, byte* payload, unsigned int length) {
   Serial.print("Message arrived [");
