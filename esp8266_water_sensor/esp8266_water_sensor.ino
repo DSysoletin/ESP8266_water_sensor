@@ -243,7 +243,7 @@ String s;
     payload.toCharArray(payload_chars,10);
     payload_len=payload.length();
 
-    client.publish(s.c_str(),payload.c_str());
+    client.publish(s.c_str(),payload.c_str(),payload_len);
     //ret=client.publish("wtr_sensor1_tempSHT10",payload.c_str());
     //client.publish(s.c_str(),payload_chars,payload_len);
     //client.publish("wtr_sensor1_tempSHT10",payload_chars,payload_len);
